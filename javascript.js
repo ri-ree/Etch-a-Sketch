@@ -1,5 +1,9 @@
 const container = document.querySelector('#maindiv');
 
+const btn = document.querySelector('button');
+btn.addEventListener('click', () => {
+});
+
 for (let i = 0; i < 16; i++) {
     const divs = document.createElement('div');
     divs.className = "divs";
@@ -9,6 +13,5 @@ for (let i = 0; i < 16; i++) {
     divs.addEventListener("mouseover", () => {
         divs.style.background = 'red';
     });
-
     container.appendChild(divs);
-}
+};
