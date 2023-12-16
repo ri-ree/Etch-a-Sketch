@@ -1,4 +1,7 @@
 #maindiv {
     display: flex;
-    border: 5px solid black;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 416x;
+    width: 416px;
 }
