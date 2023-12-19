@@ -1,8 +1,8 @@
+
 #maindiv {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 416x;
-    width: 416px;
+    height: 500px;
+    width: 500px;
     margin-top: 15px;
-}
+    border: 2px solid black;
+};
