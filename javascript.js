@@ -11,7 +11,7 @@ function newGrid(size) {
     for (let j = 0; j < size; j++) {
         let multiplerows = document.createElement('div');
         multiplerows.classList.add("rows");
-        multiplerows.style.border = "1px solid blue";
+        multiplerows.style.border = "1px solid black";
         multiplerows.style.height = 500 / size + "px";
         multiplerows.style.width = 500 / size + "px";
         multiplerows.style.boxSizing = "border-box";
