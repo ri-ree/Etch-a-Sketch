@@ -1,37 +1,25 @@
 const container = document.querySelector('#maindiv');
 const btn = document.querySelector('#button');
 
-function clearBox(elementID)
-{
-    document.getElementById(elementID).innerHTML = "";
-}
 
-
-    for (let i = 0; i < 16; i++) {
-    const divs = document.createElement('div');
-    divs.className = "divs";
-    divs.style.border = '2px solid black';
-    divs.style.height = '100px';
-    divs.style.width = '100px';
-    divs.addEventListener("mouseover", () => {
-        divs.style.background = 'red';
-    });
-    container.appendChild(divs);
-    };
-
-
-
-    btn.addEventListener('click', () => {
-        clearBox("maindiv");
-        const input = Number(prompt("Choose a number of square per side. (PS: The limit is 100)"));
-        for (j = 0; j < input; j++) {
-        const newdivs = document.createElement('div');
-        newdivs.className = "newdivs";
-        newdivs.style.border = '2px solid black';
-        newdivs.style.flexGrow = 1;
-        newdivs.addEventListener("mouseover", () => {
-            newdivs.style.background = 'red';
-        });
-        container.appendChild(newdivs);
+function newGrid(size) {
+    for (let i = 0; i < size; i++) {
+    let allRows = document.createElement('div');
+    if (i % size == 0) {
+    allRows.style.marginTop = i * (500 / size) + "px";
         };
-    });
+    for (let j = 0; j < size; j++) {
+        let multiplerows = document.createElement('div');
+        multiplerows.classList.add("rows");
+        multiplerows.style.border = "1px solid blue";
+        multiplerows.style.height = 500 / size + "px";
+        multiplerows.style.width = 500 / size + "px";
+        multiplerows.style.boxSizing = "border-box";
+        multiplerows.style.flex = 1;
+        allRows.appendChild(multiplerows);
+        };
+    container.appendChild(allRows);
+    };
+};
+
+newGrid(16);
